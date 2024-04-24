@@ -4,7 +4,7 @@ public class Testing {
 	}
 
 	public int add2(int a) {
-		return a + 1; 
+		return a + 2; 
 	}
 
 }
