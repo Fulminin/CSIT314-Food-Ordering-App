@@ -1,0 +1,43 @@
+name: Unit Testing Code Base
+
+on:
+  # So whenever code is put on the main branch it is tested to see if it actually works 
+  push:
+    branches: [ "main" ]
+  # so that any code that any prospective code which is intentded to be intergrated in to the main branch is tested before merge
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  # Testing to be run on Linux distros
+  build:
+    runs-on: ubuntu-latest
+    # what versions of the run times need to be tested
+    strategy:
+      matrix:
+        node-version: [ "20.x"]
+        java-version: ["21"]
+    steps:
+    # getting the code from the git
+    - uses: actions/checkout@v4
+
+    # running tests on the java section of the code base
+    - name: Set up JDK ${{ matrix.java-version }}
+      uses: actions/setup-java@v4
+      with:
+        java-version: ${{ matrix.java-version }}
+        distribution: "microsoft"
+        cache: maven
+    - name: Build with Maven
+      run: mvn -B package --file pom.xml
+    - name: Run Java Tests
+      run: mvn -Dtest=testTesting -DfailIfNoTests=true test
+
+    # Running tests on the javascript sections of the code base
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+         node-version: ${{ matrix.node-version }}
+         cache: npm
+    - run: npm install
+    - run: npm run build --if-present
