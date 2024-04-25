@@ -39,5 +39,5 @@ jobs:
       with:
          node-version: ${{ matrix.node-version }}
          cache: npm
-    - run: npm install
+    - run: npm ci # For Clean-Install every time
     - run: npm run build --if-present
