@@ -41,5 +41,5 @@ jobs:
          cache: npm
     - name: Build with Node
     - run: npm install
-    - name: Run JS Tests
+    #- name: Run JS Tests
     #- run: npm test
