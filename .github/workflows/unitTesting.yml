@@ -42,4 +42,4 @@ jobs:
     - name: Build with Node
       run: npm ci
     - name: Run React Tests
-    - run: npm test
+      run: npm test
