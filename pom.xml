@@ -21,6 +21,8 @@
 
     </dependencies>
     <build>
+	<sourceDirectory>${project.basedir}/src/server</sourceDirectory>
+	<testSourceDirectory>${project.basedir}/src/serve/test</testSourceDirectory>
         <finalName>maven-unit-test</finalName>
         <plugins>
 
