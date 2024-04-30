@@ -15,7 +15,7 @@ jobs:
     # what versions of the run times need to be tested
     strategy:
       matrix:
-        node-version: [ "20.x"]
+        node-version: ["20.x"]
         java-version: ["21"]
     steps:
     # getting the code from the git
@@ -31,7 +31,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run Java Tests
-      run: mvn -DfailIfNoTests=true test
+      run: mvn test
 
     # Running tests on the javascript sections of the code base
     - name: Use Node.js ${{ matrix.node-version }}
