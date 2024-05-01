@@ -29,7 +29,7 @@ jobs:
         distribution: "microsoft"
         cache: maven
     - name: Build with Maven
-      run: mvn mvn -B package --file pom.xml
+      run: mvn -B package --file pom.xml
     - name: Run Java Tests
       run: mvn test
 
