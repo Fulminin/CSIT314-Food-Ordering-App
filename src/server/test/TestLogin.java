@@ -3,7 +3,7 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class testLogin {
+public class TestLogin {
 	Login test = new Login(1,"testUser", "testPass");
 	Login testCon1 = new Login("testUser", "testPass");
 
