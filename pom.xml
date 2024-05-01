@@ -40,11 +40,11 @@
         </plugins>
 	<sourceDirectory>src/server/main/</sourceDirectory>
 	<testSourceDirectory>src/server/test/</testSourceDirectory>
-<!-- 	<resources>
+	<resources>
      		<resource>
       			<directory>src/server</directory>
      		</resource>
-	</resources> -->
+	</resources>
     </build>
 
 </project>
