@@ -44,10 +44,12 @@
      		<resource>
       			<directory>src/server/main</directory>
      		</resource>
+	</resources>
+	<testResources>
 		<testResource>
 			<directory>src/server/test</directory>
-		</testResource>	
-	</resources>
+		</testResource>
+	</testResources>
     </build>
 
 </project>
