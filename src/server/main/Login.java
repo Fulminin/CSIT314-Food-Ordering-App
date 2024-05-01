@@ -17,11 +17,11 @@ public class Login {
 		this.password = inPass;
 	}
 
-	public static void setNumber(int num) {
-		number = num;
+	public void setNumber(int num) {
+		number = num + 1;
 	}
 
-	public static int getNumber() {
+	public int getNumber() {
 		return number-1;
 	}
 

@@ -12,6 +12,8 @@ public class TestLogin {
 		assertEquals("testUser", testCon1.getUsername());
 		assertEquals("testPass", testCon1.getPassword());
 		assertEquals(testCon1.getNumber(), testCon1.getLoginID());
+		testCon1.setNumber(2);
+		assertEquals(2, testCon1.getNumber());
 	}
 
 	@Test
