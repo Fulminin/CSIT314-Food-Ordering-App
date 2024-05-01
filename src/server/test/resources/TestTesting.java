@@ -2,7 +2,7 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 
 import org.junit.jupiter.api.Test;
 
-public class testTesting {
+public class TestTesting {
 	Testing test = new Testing();
 
 	@Test
