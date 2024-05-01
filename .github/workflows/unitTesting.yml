@@ -31,7 +31,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Run Java Tests
-      run: mvn test
+      run: mvn -DskipTests=false test
 
     # Running tests on the javascript sections of the code base
     - name: Use Node.js ${{ matrix.node-version }}
