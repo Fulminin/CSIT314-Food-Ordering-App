@@ -40,11 +40,11 @@
                 	<version>2.22.0</version>
             	</plugin>
         </plugins>
-	<resources>
+<!-- 	<resources>
      		<resource>
       			<directory>src/server</directory>
      		</resource>
-	</resources>
+	</resources> -->
     </build>
 
 </project>
