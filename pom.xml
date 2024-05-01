@@ -21,8 +21,6 @@
 
     </dependencies>
     <build>
-	<sourceDirectory>/src/server/main</sourceDirectory>
-	<testSourceDirectory>/src/server/test</testSourceDirectory>
         <finalName>maven-unit-test</finalName>
         <plugins>
 
