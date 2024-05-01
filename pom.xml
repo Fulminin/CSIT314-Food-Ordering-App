@@ -42,8 +42,11 @@
 	<testSourceDirectory>src/server/test/</testSourceDirectory>
 	<resources>
      		<resource>
-      			<directory>src/server</directory>
+      			<directory>src/server/main</directory>
      		</resource>
+		<testResource>
+			<directory>src/server/test</directory>
+		</testResource>	
 	</resources>
     </build>
 
