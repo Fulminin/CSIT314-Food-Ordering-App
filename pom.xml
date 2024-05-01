@@ -35,6 +35,8 @@
             	<plugin>
                 	<groupId>org.apache.maven.plugins</groupId>
                 	<artifactId>maven-surefire-plugin</artifactId>
+			<sourceDirectory>src/server/main/</sourceDirectory>
+			<testSourceDirectory>src/server/test/</testSourceDirectory>
                 	<version>2.22.0</version>
             	</plugin>
         </plugins>
