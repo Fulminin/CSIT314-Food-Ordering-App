@@ -22,7 +22,6 @@
     </dependencies>
     <build>
         <finalName>maven-unit-test</finalName>
-	<resourceDirectory>./src/</resourceDirectory>
         <plugins>
 
 		<plugin>
