@@ -1,5 +1,6 @@
 import React from 'react'
-import Header from '../../components/Header/Header'
+import './restaurantCustomer.css'
+import Header from '../../Components/Header/Header'
 
 const restaurantCustomer = () => {
   return (

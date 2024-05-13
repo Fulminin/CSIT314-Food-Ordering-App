@@ -1,0 +1,7 @@
+.header{
+    height: auto;
+    margin: 30px auto;
+    background: url('/homePageBanner.png') no-repeat;
+    background-size: contain;
+    position: relative;
+}
