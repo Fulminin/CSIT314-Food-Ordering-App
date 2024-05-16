@@ -28,3 +28,7 @@ target/classes/Storage.class
 target/classes/Storage.java
 target/classes/User.class
 target/classes/User.java
+target/classes/OrderedFood.class
+target/classes/OrderedFood.java
+target/classes/OrderStatus.class
+target/classes/OrderStatus.java
