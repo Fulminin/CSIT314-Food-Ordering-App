@@ -12,3 +12,8 @@ a{
     text-decoration: none;
     color: inherit;
 }
+
+.app{
+    width: 85%;
+    margin: auto;
+}
