@@ -11,6 +11,15 @@ public class Food {
 		this.price = price;
 	}
 
+	public int getId() {
+		return foodId;
+	}
+
+	public boolean setId(int input) {
+		this.foodId = input;
+		return true;
+	}
+
 	public String getName() {
 		return name;
 	}
