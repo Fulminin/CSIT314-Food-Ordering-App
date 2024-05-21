@@ -5,7 +5,7 @@ public class Order {
 	private int orderId;
 	private int restarauntId;
 	private int userId;
-	private LocalDate orderDate; // needs to be in the format YY-MM-DD
+	private LocalDate orderDate; // needs to be in the format YYYY-MM-DD
 	private ArrayList<OrderedFood> foodOrdered;
 	private OrderStatus status;
 	private String promoCode;
@@ -15,7 +15,7 @@ public class Order {
 		this.orderId = orderId;
 		this.restarauntId = restarauntId;
 		this.userId = userId;
-		this.orderDate = LocalDate.parse(orderDate); /// needs to be in the format YY-MM-DD
+		this.orderDate = LocalDate.parse(orderDate); /// needs to be in the format YYYY-MM-DD
 		this.promoCode = promoCode;
 		if(orderId > numbers){
 			numbers = orderId+1;
@@ -26,7 +26,7 @@ public class Order {
 		this.orderId = numbers++;
 		this.restarauntId = restarauntId;
 		this.userId = userId;
-		this.orderDate = LocalDate.parse(orderDate); // needs to be in the format YY-MM-DD
+		this.orderDate = LocalDate.parse(orderDate); // needs to be in the format YYYY-MM-DD
 		this.status = status;
 		this.promoCode = promoCode;
 	}
@@ -43,12 +43,12 @@ public class Order {
 		return userId;
 	}
 
-	public String getDate() { // comes out in the format YY-MM-DD
+	public String getDate() { // comes out in the format YYYY-MM-DD
 		return orderDate.toString();
 	}
 
-	public boolean setDate(String orderDate) { // comes out in the format YY-MM-DD
-		this.orderDate = LocalDate.parse(orderDate); /// needs to be in the format YY-MM-DD
+	public boolean setDate(String orderDate) { // comes out in the format YYYY-MM-DD
+		this.orderDate = LocalDate.parse(orderDate); /// needs to be in the format YYYY-MM-DD
 		return true;
 	}
 
