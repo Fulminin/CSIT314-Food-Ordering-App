@@ -1,13 +1,13 @@
 import React from 'react'
-import './restaurantCustomer.css'
+import './home.css'
 import Header from '../../Components/Header/Header'
 
-const restaurantCustomer = () => {
+const home = () => {
   return (
-    <div>
+    <div className='home'>
       <Header/>
     </div>
   )
 }
 
-export default restaurantCustomer
+export default home
