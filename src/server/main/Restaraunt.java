@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class Restaraunt {
+public class Restaraunt implements Serializable{
 	private int restaurantId;
 	private int loginId;
 	private String name;

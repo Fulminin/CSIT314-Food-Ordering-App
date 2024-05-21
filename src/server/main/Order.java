@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Order {
+public class Order implements Serializable{
 	private int orderId;
 	private int restarauntId;
 	private int userId;

@@ -1,6 +1,7 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Promo {
+public class Promo implements Serializable{
 	private String promoCode;
 	private double discount;
 	private LocalDate startDate;

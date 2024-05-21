@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-public class User {
+public class User implements Serializable{
 	private int userId;
 	private int loginId;
 	private String firstName;
