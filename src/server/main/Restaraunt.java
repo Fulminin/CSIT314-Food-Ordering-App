@@ -1,4 +1,3 @@
-import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -17,7 +16,7 @@ public class Restaraunt {
 	private ArrayList<Food> menu;
 	private ArrayList<Order> orders;
 
-	public Restaraunt(int restaurantId, int loginId, String name, String description, double credit, double rating, int ratingCount, BufferedImage image){
+	public Restaraunt(int restaurantId, int loginId, String name, String description, double credit, double rating, int ratingCount){
 		this.restaurantId = restaurantId;
 		this.loginId = loginId;
 		this.name = name;
