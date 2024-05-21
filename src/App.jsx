@@ -6,6 +6,8 @@ import Cart from './pages/cart/cart'
 import RestaurantCustomer from './pages/restaurantCustomer/restaurantCustomer'
 import HomePageRO from './pages/homePageRO/homePageRO'
 import HomePageRS from './pages/homePageRS/homePageRS'
+import ManageMenu from './pages/manageMenu/manageMenu'
+import Report from './pages/report/report'
 
 const App = () => {
   return (
@@ -17,6 +19,8 @@ const App = () => {
         <Route path='/cart' element={<Cart />} />
         <Route path='/homeRO' element={<HomePageRO />} />
         <Route path='/homeRS' element={<HomePageRS />} />
+        <Route path='/manageMenu' element={<ManageMenu />} />
+        <Route path='/report' element={<Report />} />
       </Routes>
     </div>
   );
