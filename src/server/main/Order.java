@@ -16,6 +16,7 @@ public class Order {
 		this.restarauntId = restarauntId;
 		this.userId = userId;
 		this.orderDate = LocalDate.parse(orderDate); /// needs to be in the format YYYY-MM-DD
+		this.status = status;
 		this.promoCode = promoCode;
 		if(orderId > numbers){
 			numbers = orderId+1;
@@ -87,7 +88,7 @@ public class Order {
 		return true;
 	}
 
-	public boolean setUserid(int input) {
+	public boolean setUserId(int input) {
 		this.userId = input;
 		return true;
 	}
