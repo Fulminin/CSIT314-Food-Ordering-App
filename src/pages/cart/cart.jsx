@@ -1,6 +1,6 @@
 import React from 'react'
 import './cart.css'
-import { assets } from '../../assets/assets';
+import { assets } from '../../Assets/assets';
 
 const Cart = () => {
     return(

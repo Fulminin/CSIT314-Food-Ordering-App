@@ -1,6 +1,6 @@
 import React from 'react'
 import './restaurantCustomer.css'
-import { assets } from '../../assets/assets';
+import { assets } from '../../Assets/assets';
 
 const restaurantCustomer = () => {
   return (
