@@ -16,6 +16,7 @@ public class Order {
 		this.restarauntId = restarauntId;
 		this.userId = userId;
 		this.orderDate = LocalDate.parse(orderDate); /// needs to be in the format YYYY-MM-DD
+		this.foodOrdered = new ArrayList<OrderedFood>();
 		this.status = status;
 		this.promoCode = promoCode;
 		if(orderId > numbers){
@@ -28,6 +29,7 @@ public class Order {
 		this.restarauntId = restarauntId;
 		this.userId = userId;
 		this.orderDate = LocalDate.parse(orderDate); // needs to be in the format YYYY-MM-DD
+		this.foodOrdered = new ArrayList<OrderedFood>();
 		this.status = status;
 		this.promoCode = promoCode;
 	}
@@ -106,4 +108,5 @@ public class Order {
 		this.promoCode = code;
 		return true;
 	}
+	
 }

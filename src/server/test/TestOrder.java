@@ -90,4 +90,13 @@ public class TestOrder {
 		assertNotEquals("Promo1", con1.getPromoCode());
 		assertNotEquals("none", con2.getPromoCode());
 	}
+
+	@Test
+	public void testFoodordered() {
+		assertTrue(con1.addFood(new OrderedFood(0, 2, 3)));
+		assertEquals(new OrderedFood(0, 2, 3), con1.getFood(0));
+		assertNotEquals(new OrderedFood(1, 2, 3), con1.getFood(0));
+		assertTrue(con1.addFood(new OrderedFood(1, 2, 5)));
+		assertTrue(con1.removeFood(1));
+	}
 }

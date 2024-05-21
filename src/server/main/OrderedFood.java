@@ -25,4 +25,23 @@ public class OrderedFood {
 		this.quantity = num;
 		return true;
 	}
+
+	public boolean equals(Object check) {
+		if(this == check) {
+			return true;
+		}
+		else if(check == null || getClass() != check.getClass()) {
+			return false;
+		}
+		else {
+			OrderedFood orderCheck = (OrderedFood) check;
+			if(foodId == orderCheck.getFoodId() && orderId == orderCheck.getOrderId() && quantity == orderCheck.getQty()) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+
+	}
 }
