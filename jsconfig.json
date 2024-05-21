@@ -5,12 +5,16 @@
       "jsx": "react",
       "paths": {
         "assets": ["./assets"],
+        "clients":["./clients"],
         "components": ["./components"],
         "reference": ["./reference"],
         "service": ["./service"],
         "ui": ["./ui"],
-        "workflow": ["./workflow"]
-      }
+        "workflow": ["./workflow"],
+        "pages":["./pages"],
+        "server":["./server"],
+        "target":["./target"]
+      },
     },
     "exclude": ["node_modules", "build"]
   }

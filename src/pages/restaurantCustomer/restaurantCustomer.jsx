@@ -1,11 +1,16 @@
 import React from 'react'
 import './restaurantCustomer.css'
-import Header from '../../Components/Header/Header'
+import { assets } from '../../assets/assets';
 
 const restaurantCustomer = () => {
   return (
-    <div>
-      <Header/>
+    <div className='restaurantCustomer'>
+      <div>
+        <img src={assets.bentoHouseBanner} alt="banner" className='banner'/>
+      </div>
+      <div className='Restaurant-content'>
+
+      </div>
     </div>
   )
 }
