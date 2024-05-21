@@ -1,16 +1,16 @@
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Promo {
 	private String promoCode;
 	private double discount;
-	private Date startDate;
-	private Date endDate;
+	private LocalDate startDate;
+	private LocalDate endDate;
 
-	public Promo(String promoCode, double discount, Date starDate, Date endDate) {
+	public Promo(String promoCode, double discount, String startDate, String endDate) {
 		this.promoCode = promoCode;
 		this.discount = discount;
-		this.startDate = starDate;
-		this.endDate = endDate;
+		this.startDate = LocalDate.parse(startDate); // needs to be in the format YYYY-MM-DD
+		this.endDate = LocalDate.parse(endDate); // needs to be in the format YYYY-MM-DD
 	}
 
 	// promo code
@@ -34,22 +34,22 @@ public class Promo {
 	}
 
 	// start date
-	public Date getStartDate() {
-		return startDate;
+	public String getStartDate() {
+		return startDate.toString();  // outputs format YYYY-MM-DD
 	}
 
-	public boolean setStartDate(Date startDate) {
-		this.startDate = startDate;
+	public boolean setStartDate(String startDate) {
+		this.startDate = LocalDate.parse(startDate);  // needs to be in the format YYYY-MM-DD
 		return true;
 	}
 
 	// end date
-	public Date getEndDate() {
-		return endDate;
+	public String getEndDate() { // outputs format YYYY-MM-DD
+		return endDate.toString();
 	}
 
-	public boolean setEndDate(Date endDate) {
-		this.endDate = endDate;
+	public boolean setEndDate(String endDate) { 
+		this.endDate = LocalDate.parse(endDate);  // needs to be in the format YYYY-MM-DD
 		return true;
 	}
 }

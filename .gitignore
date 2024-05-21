@@ -46,3 +46,5 @@ target/test-classes/TestOrder.class
 target/test-classes/TestOrder.java
 target/test-classes/TestOrderedFood.class
 target/test-classes/TestOrderedFood.java
+target/test-classes/TestPromo.class
+target/test-classes/TestPromo.java
