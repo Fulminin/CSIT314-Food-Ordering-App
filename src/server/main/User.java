@@ -31,7 +31,7 @@ public class User {
 	}
 
 	// loginId
-	public int getloginId() {
+	public int getLoginId() {
 		return loginId;
 	}
 
@@ -41,7 +41,7 @@ public class User {
 	}
 
 	// firstname
-	public String getfirstname() {
+	public String getFirstname() {
 		return firstName;
 	}
 
@@ -51,7 +51,7 @@ public class User {
 	}
 
 	// lastname
-	public String getLastname() {
+	public String getLastName() {
 		return lastName;
 	}
 

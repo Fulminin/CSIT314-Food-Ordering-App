@@ -83,4 +83,24 @@ public class Address {
 		this.unitNum = input;
 		return true;
 	}
+
+	public boolean equals(Object check) {
+		if(this == check) {
+			return true;
+		}
+		else if(check == null || getClass() != check.getClass()) {
+			return false;
+		}
+		else {
+			// int addressId, int postcode, String city, String streetName, int streetNum, int unitNum
+			Address addrCheck = (Address) check;
+			if(addressId == addrCheck.getId() && postcode == addrCheck.getPostcode() && city.equals(addrCheck.getCity()) && streetName.equals(addrCheck.getStreet()) && streetNum == addrCheck.getStreetNum() && unitNum == addrCheck.getUnitNum()) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+
+	}
 }
