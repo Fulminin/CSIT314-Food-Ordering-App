@@ -1,33 +1,32 @@
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 
 public class Order {
 	private int orderId;
 	private int restarauntId;
 	private int userId;
-	private Date orderDate;
+	private LocalDate orderDate; // needs to be in the format YY-MM-DD
 	private ArrayList<OrderedFood> foodOrdered;
 	private OrderStatus status;
 	private String promoCode;
 	public static int numbers = 0;
 
-	public Order(int orderId, int restarauntId, int userId, Date orderDate, OrderStatus status, String promoCode) {
+	public Order(int orderId, int restarauntId, int userId, String orderDate, OrderStatus status, String promoCode) {
 		this.orderId = orderId;
 		this.restarauntId = restarauntId;
 		this.userId = userId;
-		this.orderDate = orderDate;
-		this.status = status;
+		this.orderDate = LocalDate.parse(orderDate); /// needs to be in the format YY-MM-DD
 		this.promoCode = promoCode;
 		if(orderId > numbers){
 			numbers = orderId+1;
 		}
 	}
 
-	public Order(int restarauntId, int userId, Date orderDate, OrderStatus status, String promoCode) {
+	public Order(int restarauntId, int userId, String orderDate, OrderStatus status, String promoCode) {
 		this.orderId = numbers++;
 		this.restarauntId = restarauntId;
 		this.userId = userId;
-		this.orderDate = orderDate;
+		this.orderDate = LocalDate.parse(orderDate); // needs to be in the format YY-MM-DD
 		this.status = status;
 		this.promoCode = promoCode;
 	}
@@ -44,8 +43,13 @@ public class Order {
 		return userId;
 	}
 
-	public Date getDate() {
-		return orderDate;
+	public String getDate() { // comes out in the format YY-MM-DD
+		return orderDate.toString();
+	}
+
+	public boolean setDate(String orderDate) { // comes out in the format YY-MM-DD
+		this.orderDate = LocalDate.parse(orderDate); /// needs to be in the format YY-MM-DD
+		return true;
 	}
 
 	public OrderedFood getFood(int foodIndex) {
