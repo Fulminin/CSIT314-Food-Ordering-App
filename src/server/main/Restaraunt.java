@@ -114,6 +114,11 @@ public class Restaraunt {
 		return true;
 	}
 
+	public boolean addAddressList(ArrayList<Address> list) {
+		address.addAll(list);
+		return true;
+	}
+
 	public Address getAddress(int pos) {
 		return address.get(pos);
 	}
@@ -133,7 +138,12 @@ public class Restaraunt {
 	}
 
 	public boolean addTagList(String[] list) {
-		tags.addAll(tags);
+		tags.addAll(Arrays.asList(list));
+		return true;
+	}
+
+	public boolean addTagList(ArrayList<String> list) {
+		tags.addAll(list);
 		return true;
 	}
 
@@ -161,6 +171,11 @@ public class Restaraunt {
 		return true;
 	}
 
+	public boolean addFoodList(ArrayList<Food> list) {
+		menu.addAll(list);
+		return true;
+	}
+
 	public Food getFood(int i) {
 		return menu.get(i);
 	}
@@ -182,6 +197,11 @@ public class Restaraunt {
 
 	public boolean addOrderList(Order[] input) {
 		orders.addAll(Arrays.asList(input));
+		return true;
+	}
+
+	public boolean addOrderList(ArrayList<Order> input) {
+		orders.addAll(input);
 		return true;
 	}
 
