@@ -13,8 +13,8 @@ public class Model {
 
 	}
 
-	public Model(Storage keep, Communication talk) {
-
+	public Model() {
+		store = new DataStorage();
 	}
 
 	public boolean connect() {

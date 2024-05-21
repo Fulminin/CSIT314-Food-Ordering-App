@@ -17,7 +17,7 @@ public class DataStorage implements Storage{
 		try {
 			FileInputStream fileIn = new FileInputStream(loginSave);
 			ObjectInputStream converter = new ObjectInputStream(fileIn);
-			ArrayList<Login> logs = new ArrayList<Login>(Arrays.asList((Login[]) converter.readObject()));
+			ArrayList<Login> logs = (ArrayList<Login>)converter.readObject();
 			converter.close();
 			fileIn.close();
 
@@ -32,7 +32,7 @@ public class DataStorage implements Storage{
 		try {
 			FileInputStream fileIn = new FileInputStream(userSave);
 			ObjectInputStream converter = new ObjectInputStream(fileIn);
-			ArrayList<User> users = new ArrayList<User>(Arrays.asList((User[]) converter.readObject()));
+			ArrayList<User> users = (ArrayList<User>)converter.readObject();
 			converter.close();
 			fileIn.close();
 
@@ -47,7 +47,7 @@ public class DataStorage implements Storage{
 		try {
 			FileInputStream fileIn = new FileInputStream(restarauntSave);
 			ObjectInputStream converter = new ObjectInputStream(fileIn);
-			ArrayList<Restaraunt> rest = new ArrayList<Restaraunt>(Arrays.asList((Restaraunt[]) converter.readObject()));
+			ArrayList<Restaraunt> rest = (ArrayList<Restaraunt>)converter.readObject();
 			converter.close();
 			fileIn.close();
 
@@ -62,7 +62,7 @@ public class DataStorage implements Storage{
 		try {
 			FileInputStream fileIn = new FileInputStream(promoSave);
 			ObjectInputStream converter = new ObjectInputStream(fileIn);
-			ArrayList<Promo> pros = new ArrayList<Promo>(Arrays.asList((Promo[]) converter.readObject()));
+			ArrayList<Promo> pros = (ArrayList<Promo>) converter.readObject();
 			converter.close();
 			fileIn.close();
 
@@ -77,7 +77,7 @@ public class DataStorage implements Storage{
 		try {
 			FileOutputStream fileOut = new FileOutputStream(loginSave, false);
 			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
-			converter.writeObject(newLogin.toArray());
+			converter.writeObject(newLogin);
 			converter.close();
 			fileOut.close();
 
@@ -92,7 +92,7 @@ public class DataStorage implements Storage{
 		try {
 			FileOutputStream fileOut = new FileOutputStream(userSave, false);
 			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
-			converter.writeObject(newUser.toArray());
+			converter.writeObject(newUser);
 			converter.close();
 			fileOut.close();
 
@@ -107,7 +107,7 @@ public class DataStorage implements Storage{
 		try {
 			FileOutputStream fileOut = new FileOutputStream(restarauntSave, false);
 			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
-			converter.writeObject(newRestaraunt.toArray());
+			converter.writeObject(newRestaraunt);
 			converter.close();
 			fileOut.close();
 
@@ -122,7 +122,7 @@ public class DataStorage implements Storage{
 		try {
 			FileOutputStream fileOut = new FileOutputStream(promoSave, false);
 			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
-			converter.writeObject(newPromo.toArray());
+			converter.writeObject(newPromo);
 			converter.close();
 			fileOut.close();
 

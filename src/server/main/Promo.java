@@ -53,4 +53,28 @@ public class Promo implements Serializable{
 		this.endDate = LocalDate.parse(endDate);  // needs to be in the format YYYY-MM-DD
 		return true;
 	}
+
+	public boolean equals(Object check) {
+		if(this == check) {
+			return true;
+		}
+		else if(check == null || getClass() != check.getClass()) {
+			return false;
+		}
+		else {
+			// int restaurantId, int loginId, String name, String description, double credit, double rating, int ratingCount
+			Promo use = (Promo) check;
+			if(promoCode.equals(use.getPromoCode())
+				&& discount == use.getDiscount() 
+				&& this.getStartDate().equals(use.getStartDate())
+				&& this.getEndDate().equals(use.getEndDate())
+				) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+
+	}
 }

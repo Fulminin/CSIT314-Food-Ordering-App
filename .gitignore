@@ -53,3 +53,11 @@ target/test-classes/testUser.java
 target/test-classes/TestRestaraaunt.class
 target/test-classes/TestRestaraaunt.java
 target/test-classes/testRestaraunt.java
+target/classes/DataStorage.class
+target/classes/DataStorage.java
+target/test-classes/testStorage.class
+target/test-classes/testStorage.java
+loginSave.ser
+promoSave.ser
+restarauntSave.ser
+userSave.ser

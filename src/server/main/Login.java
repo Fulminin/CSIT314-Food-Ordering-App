@@ -50,4 +50,26 @@ public class Login implements Serializable{
 	public void setPassword(String inPass) {
 		password = inPass;
 	}
+
+	public boolean equals(Object check) {
+		if(this == check) {
+			return true;
+		}
+		else if(check == null || getClass() != check.getClass()) {
+			return false;
+		}
+		else {
+			// int inLog, String inUser, String inPass
+			Login log = (Login) check;
+			if(LoginID == log.getLoginID() 
+				&& username.equals(log.getUsername()) 
+				&& password.equals(log.getPassword())) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+
+	}
 }

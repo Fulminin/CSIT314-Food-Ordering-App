@@ -213,4 +213,31 @@ public class Restaraunt implements Serializable{
 	public ArrayList<Order> getOrderList() {
 		return orders;
 	}
+
+	public boolean equals(Object check) {
+		if(this == check) {
+			return true;
+		}
+		else if(check == null || getClass() != check.getClass()) {
+			return false;
+		}
+		else {
+			// int restaurantId, int loginId, String name, String description, double credit, double rating, int ratingCount
+			Restaraunt use = (Restaraunt) check;
+			if(restaurantId == use.getId() 
+				&& loginId == use.getLoginId() 
+				&& name.equals(use.getName())
+				&& description.equals(use.getDescription())
+				&& credit == use.getCredit()
+				&& rating == use.getRating()
+				&& ratingCount == use.getCount()
+				) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+
+	}
 }

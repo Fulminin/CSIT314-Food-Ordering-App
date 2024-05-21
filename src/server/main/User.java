@@ -109,4 +109,30 @@ public class User implements Serializable{
 	public ArrayList<Address> getAddressList() {
 		return address;
 	}
+
+	public boolean equals(Object check) {
+		if(this == check) {
+			return true;
+		}
+		else if(check == null || getClass() != check.getClass()) {
+			return false;
+		}
+		else {
+			// int userId, int loginId, String firstName, String lastName, double credit, MemberStatus memberStatus
+			User use = (User) check;
+			if(userId == use.getId() 
+				&& loginId == use.getLoginId() 
+				&& firstName.equals(use.getFirstname())
+				&& lastName.equals(use.getLastName())
+				&& credit == use.getCredit()
+				&& memberStatus == use.getMemberStatus()
+				) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+
+	}
 }
