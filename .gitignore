@@ -34,3 +34,11 @@ target/classes/OrderStatus.class
 target/classes/OrderStatus.java
 target/classes/Communication.class
 target/classes/Communication.java
+scrapped/SQLiteStorage.java
+target/classes/Controller.java
+target/classes/Model.class
+target/classes/Model.java
+target/test-classes/TestAddress.class
+target/test-classes/TestAddress.java
+target/test-classes/TestFood.class
+target/test-classes/TestFood.java
