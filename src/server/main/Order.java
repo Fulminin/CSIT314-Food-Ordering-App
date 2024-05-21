@@ -11,21 +11,25 @@ public class Order {
 	private String promoCode;
 	public static int numbers = 0;
 
-	public Order(int orderId, int restarauntId, int userId, Date orderDate) {
+	public Order(int orderId, int restarauntId, int userId, Date orderDate, OrderStatus status, String promoCode) {
 		this.orderId = orderId;
 		this.restarauntId = restarauntId;
 		this.userId = userId;
 		this.orderDate = orderDate;
+		this.status = status;
+		this.promoCode = promoCode;
 		if(orderId > numbers){
 			numbers = orderId+1;
 		}
 	}
 
-	public Order(int restarauntId, int userId, Date orderDate) {
+	public Order(int restarauntId, int userId, Date orderDate, OrderStatus status, String promoCode) {
 		this.orderId = numbers++;
 		this.restarauntId = restarauntId;
 		this.userId = userId;
 		this.orderDate = orderDate;
+		this.status = status;
+		this.promoCode = promoCode;
 	}
 
 	public int getOrderId() {
