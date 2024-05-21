@@ -91,6 +91,11 @@ public class User {
 		return true;
 	}
 
+	public boolean addAddressList(ArrayList<Address> input) {
+		this.address.addAll(input);
+		return true;
+	}
+
 	public boolean removeAddress(int i) {
 		this.address.remove(i);
 		return true;

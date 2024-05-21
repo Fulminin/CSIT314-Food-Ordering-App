@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -98,5 +99,6 @@ public class TestOrder {
 		assertNotEquals(new OrderedFood(1, 2, 3), con1.getFood(0));
 		assertTrue(con1.addFood(new OrderedFood(1, 2, 5)));
 		assertTrue(con1.removeFood(1));
+		assertFalse(con1.removeFood(10));
 	}
 }

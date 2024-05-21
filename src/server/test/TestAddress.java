@@ -1,4 +1,5 @@
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -66,5 +67,21 @@ public class TestAddress {
 		assertTrue(con2.setUnitNum(5));
 		assertEquals(5, con2.getUnitNum());
 		assertNotEquals(0, con2.getUnitNum());
+	}
+
+	@Test
+	public void testEquals() {
+		assertTrue(con1.equals(new Address(1, 2520, "Wollongong", "Crown St", 10, 5)));
+		assertFalse(con1.equals(con2));
+		assertFalse(con1.equals("Not an Address"));
+		assertTrue(con1.equals(con1));
+		assertFalse(con1.equals(null));
+		assertFalse(con1.equals(con2));
+		assertFalse(con1.equals(new Address(2, 2520, "Wollongong", "Crown St", 10, 5)));
+		assertFalse(con1.equals(new Address(1, 2521, "Wollongong", "Crown St", 10, 5)));
+		assertFalse(con1.equals(new Address(1, 2520, "gong", "Crown St", 10, 5)));
+		assertFalse(con1.equals(new Address(1, 2520, "Wollongong", "Crown", 10, 5)));
+		assertFalse(con1.equals(new Address(1, 2520, "Wollongong", "Crown St", 11, 5)));
+		assertFalse(con1.equals(new Address(1, 2520, "Wollongong", "Crown St", 10, 6)));
 	}
 }
