@@ -1,4 +1,6 @@
-public class OrderedFood {
+import java.io.Serializable;
+
+public class OrderedFood implements Serializable{
 	private int foodId;
 	private int orderId;
 	private int quantity;
