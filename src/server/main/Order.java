@@ -77,6 +77,11 @@ public class Order {
 		return status;
 	}
 
+	public boolean setOrderId(int input) {
+		this.orderId = input;
+		return true;
+	}
+
 	public boolean setProgress(OrderStatus inputStatus) {
 		this.status = inputStatus;
 		return true;

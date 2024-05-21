@@ -42,3 +42,6 @@ target/test-classes/TestAddress.class
 target/test-classes/TestAddress.java
 target/test-classes/TestFood.class
 target/test-classes/TestFood.java
+target/test-classes/TestOrder.class
+target/test-classes/TestOrder.java
+src/server/test/TestOrder.java
