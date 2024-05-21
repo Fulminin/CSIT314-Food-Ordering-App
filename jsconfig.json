@@ -14,7 +14,7 @@
         "pages":["./pages"],
         "server":["./server"],
         "target":["./target"]
-      },
+      }
     },
     "exclude": ["node_modules", "build"]
   }
