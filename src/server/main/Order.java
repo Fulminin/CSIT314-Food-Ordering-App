@@ -82,6 +82,16 @@ public class Order {
 		return true;
 	}
 
+	public boolean setRestaurantId(int input) {
+		this.restarauntId = input;
+		return true;
+	}
+
+	public boolean setUserid(int input) {
+		this.userId = input;
+		return true;
+	}
+
 	public boolean setProgress(OrderStatus inputStatus) {
 		this.status = inputStatus;
 		return true;
