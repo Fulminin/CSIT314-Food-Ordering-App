@@ -75,7 +75,7 @@ public class DataStorage implements Storage{
 
 	public boolean setLogin(ArrayList<Login> newLogin){
 		try {
-			FileOutputStream fileOut = new FileOutputStream(loginSave);
+			FileOutputStream fileOut = new FileOutputStream(loginSave, false);
 			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
 			converter.writeObject(newLogin.toArray());
 			converter.close();
@@ -90,7 +90,7 @@ public class DataStorage implements Storage{
 
 	public boolean setUser(ArrayList<User> newUser) {
 		try {
-			FileOutputStream fileOut = new FileOutputStream(userSave);
+			FileOutputStream fileOut = new FileOutputStream(userSave, false);
 			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
 			converter.writeObject(newUser.toArray());
 			converter.close();
@@ -105,7 +105,7 @@ public class DataStorage implements Storage{
 
 	public boolean setRestaraunt(ArrayList<Restaraunt> newRestaraunt) {
 		try {
-			FileOutputStream fileOut = new FileOutputStream(restarauntSave);
+			FileOutputStream fileOut = new FileOutputStream(restarauntSave, false);
 			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
 			converter.writeObject(newRestaraunt.toArray());
 			converter.close();
@@ -120,7 +120,7 @@ public class DataStorage implements Storage{
 
 	public boolean setPromo(ArrayList<Promo> newPromo) {
 		try {
-			FileOutputStream fileOut = new FileOutputStream(promoSave);
+			FileOutputStream fileOut = new FileOutputStream(promoSave, false);
 			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
 			converter.writeObject(newPromo.toArray());
 			converter.close();
