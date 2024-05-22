@@ -15,7 +15,7 @@ import Report from './pages/report/report'
 const App = () => {
   return (
     <div className='app'>
-    <RestaurantInfo />
+        
     <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/restaurantCustomer' element={<RestaurantCustomer />} />

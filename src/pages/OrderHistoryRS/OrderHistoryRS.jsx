@@ -1,5 +1,6 @@
 import React from 'react';
 import './OrderHistoryRS.css';
+import { Link } from 'react-router-dom';
 import { assets } from '../../Assets/assets';
 
 const orders = [
@@ -19,6 +20,7 @@ const orders = [
 const OrderHistoryPage = () => {
 return (
     <div className="order-history-page">
+    <Link to="/homeRO" className='back'>Back to home page</Link>
     {orders.map(order => (
         <div key={order.id} className="order-item">
         {order.items.map((item, index) => (
