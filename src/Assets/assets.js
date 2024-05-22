@@ -114,3 +114,88 @@ export const assets = {
     udonIcon,
     visapay
 }
+
+export const food_list = [
+    {
+        _id: "1",
+        name: "Chicken Teriyaki Bento",
+        image: chickenTeriyakiBento,
+        price: 16.90,
+        description: "Chicken Teriyaki Bento",
+        restaurant: "Bento House"
+    },
+    {
+        _id: "2",
+        name: "Seafood Sushi Plater",
+        image: sSushiPlater,
+        price: 24.50,
+        description: "Seafood Sushi Plater",
+        restaurant: "Bento House"
+    },
+    {
+        _id: "3",
+        name: "Chicken Katsu Don",
+        image: chickenKatsuDon,
+        price: 15.90,
+        description: "Chicken Katsu Don",
+        restaurant: "Bento House"
+    },
+    {
+        _id: "4",
+        name: "OmuRice",
+        image: omuRice,
+        price: 11.90,
+        description: "OmuRice",
+        restaurant: "Bento House"
+    },
+    {
+        _id: "5",
+        name: "Salmon Teriyaki Bento",
+        image: SalmonTBento,
+        price: 18.90,
+        description: "Salmon Teriyaki Bento",
+        restaurant: "Bento House"
+    },
+    {
+        _id: "6",
+        name: "Chicken Katsu Bento",
+        image: chickenKBento,
+        price: 24.50,
+        description: "Chicken Katsu Bento",
+        restaurant: "Bento House"
+    },
+    {
+        _id: "7",
+        name: "Tonkotsu Ramen",
+        image: tonkotsuRamen,
+        price: 17.90,
+        description: "Tonkotsu Ramen",
+        restaurant: "Bento House"
+    },
+    {
+        _id: "8",
+        name: "Takoyaki",
+        image: takoyaki,
+        price: 7.29,
+        description: "Takoyaki",
+        restaurant: "Bento House"
+    },
+    {
+        _id: "9",
+        name: "beefUdon",
+        image: beefUdon,
+        price: 17.29,
+        description: "beefUdon",
+        restaurant: "Bento House"
+    },
+    {
+        _id: "10",
+        name: "Sushi Bento",
+        image: bentoHouse,
+        price: 7.29,
+        description: "Sushi Bento",
+        restaurant: "Bento House"
+    }
+
+
+]
