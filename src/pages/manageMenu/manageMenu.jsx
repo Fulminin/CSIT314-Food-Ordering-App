@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './manageMenu.css';
 import { Link } from 'react-router-dom';
 import { assets } from '../../Assets/assets';
-import FoodDisplay from '../../Components/FoodDisplay/FoodDisplay';
-import StarRating from '../../Components/StarRating/StarRating';
+import MenuDisplay from '../../Components/MenuDisplay/MenuDisplay';
 
 const ManageMenu = () => {
+  const [category] = useState("All");
+
   return (
     <div className='manageMenu'>
       <div className='banner-container'>
@@ -14,16 +15,18 @@ const ManageMenu = () => {
       </div>
       <div className='mngMenu'>
         <div>
-            <p className='menuTitle'>
-                <img src={assets.menu} alt="menu" className='menu' />
-                Manage Menu
-            </p>
-            <hr/>
-            
+          <p className='menuTitle'>
+            <img src={assets.menu} alt="menu" className='menu' />
+            Manage Menu
+          </p>
+          <hr />
+        </div>
+        <div>
+          <MenuDisplay category={category} />
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default ManageMenu;
