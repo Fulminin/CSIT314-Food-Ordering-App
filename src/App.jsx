@@ -6,19 +6,24 @@ import Cart from './pages/cart/cart'
 import RestaurantCustomer from './pages/restaurantCustomer/restaurantCustomer'
 import HomePageRO from './pages/homePageRO/homePageRO'
 import HomePageRS from './pages/homePageRS/homePageRS'
+import ViewOrdersRS from './pages/viewOrdersRS/viewOrdersRS'
+import OrderHistoryPage from './pages/OrderHistoryRS/OrderHistoryRS'
+import RestaurantInfo from './pages/restaurantInfo/restaurantInfo'
+
 
 const App = () => {
   return (
     <div className='app'>
-      <Navbar />
-      <Routes>
+    <RestaurantInfo />
+    <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/restaurantCustomer' element={<RestaurantCustomer />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/homeRO' element={<HomePageRO />} />
         <Route path='/homeRS' element={<HomePageRS />} />
-      </Routes>
-    </div>
+        <Route path='/viewOrdersRS' element={<ViewOrdersRS />} />
+    </Routes>
+</div>
   );
 };
 

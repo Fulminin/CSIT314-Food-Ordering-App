@@ -1,0 +1,151 @@
+.info-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.info-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.info-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.avatar-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.avatar {
+    /*width: 180px; */
+    /* height: 180px; */
+    background: linear-gradient(45deg, #ff6b6b, #f7b42c);
+    border-radius: 50%;
+    /* position: absolute; */
+    margin-left: auto;
+    margin-right: auto;
+    /* left: 0; */
+    /* right: 0; */
+    text-align: center;
+}
+
+.default-avatar {
+    width: 180px; 
+    height: 180px; 
+    background: linear-gradient(45deg, #ff6b6b, #f7b42c);
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.edit-button {
+    bottom: 0;
+    right: 0;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-button-icon {
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    scale: 40%;
+    padding: 10px;
+
+}
+
+.edit-button-mini {
+    scale: 25%;
+}
+
+.info-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-item {
+    display: flex;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.info-item label {
+    flex: 1;
+    font-weight: bold;
+    color: #ff6b6b;
+    font-size: 1.4em;
+    font-family: Tahoma, sans-serif;
+}
+
+.info-content {
+    flex: 2;
+    display: flex;
+    align-items: center;
+}
+
+.info-content span {
+    flex: 1;
+    font-family: Tahoma, sans-serif;
+    font-size: 1.2em;
+}
+
+.info-content input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.info-content .edit-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.info-content .edit-button svg {
+    color: #ff6b6b;
+}
+
+.back-button {
+    background-color: rgba(255, 118, 34, 1);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-left: 100px;
+    border-radius: 10px;
+    width: 120px;
+}
+
+.save-button {
+    background-color: rgba(255, 118, 34, 1);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    margin-right: 100px;
+    border-radius: 10px;
+    width: 120px;
+    float: right;
+}
