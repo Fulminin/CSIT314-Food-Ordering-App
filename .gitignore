@@ -6,3 +6,4 @@ target/classes/Login.java
 target/classes/Testing.java
 target/test-classes/TestLogin.java
 target/test-classes/TestTesting.java
+node_modules

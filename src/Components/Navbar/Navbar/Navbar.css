@@ -1,0 +1,37 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logoBell{
+    width: 60px;
+    padding-right: 10px;
+}
+
+.navbar .logoName{
+    width: 100px;
+    margin-right: auto;
+}
+
+.navbar .cart{
+    
+    padding-top: 5px;
+    width: 25px;
+    height: 25px;
+}
+
+.navbar button{
+    background: transparent;
+    font-size: 16px;
+    border: 1px solid;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-left: 20px;
+    transition: 0.2s;
+}
+
+.navbar button:hover{
+    background-color: #fff7f2;
+}
