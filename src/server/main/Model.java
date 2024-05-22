@@ -31,6 +31,7 @@ public class Model {
 		}
 
 	}
+
 	// not sure if actually needed but made thses if we need to connect or disconnect from stuff
 	public boolean connect() {
 		return false;
