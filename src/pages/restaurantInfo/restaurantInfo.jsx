@@ -166,7 +166,7 @@ const RestaurantInfo = () => {
               {isEditing.description ? (
                 <input
                   type="text"
-                  maxLength={20}
+                  maxLength={100}
                   value={description}
                   onChange={(e) => handleInputChange(setDescription, e)}
                 />

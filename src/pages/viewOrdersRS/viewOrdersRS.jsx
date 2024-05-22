@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import OrderList from '../../Components/OrderList/OrderList';
 import AcceptOrder from '../../Components/AcceptOrder/AcceptOrder';
 import RejectOrder from '../../Components/RejectOrder/RejectOrder';
+import { Link } from 'react-router-dom';
 import './viewOrdersRS.css';
 
 
@@ -57,6 +58,7 @@ const handleRejectClick = (order) => {
 
 return (
     <div className="orders-page">
+        <Link to="/homeRO" className='back'>Back to home page</Link>
 
     {showAcceptForm && (
         <AcceptOrder order={selectedOrder} onBack={() => setShowAcceptForm(false)} />
