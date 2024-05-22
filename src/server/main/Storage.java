@@ -9,6 +9,8 @@ public interface Storage {
 	public ArrayList<Restaraunt> fetchRestaraunt();
 	// fetch promo
 	public ArrayList<Promo> fetchPromo();
+	// fetch orders
+	public ArrayList<Order> fetchOrder();
 	// set login
 	public boolean setLogin(ArrayList<Login> newLogin);
 	// set user
@@ -17,5 +19,7 @@ public interface Storage {
 	public boolean setRestaraunt(ArrayList<Restaraunt> newRestaraunt);
 	// set promo
 	public boolean setPromo(ArrayList<Promo> newPromo);
+	// set Order
+	public boolean setOrder(ArrayList<Order> newOrder);
 
 }

@@ -39,6 +39,15 @@ public class Order implements Serializable{
 		return orderId;
 	}
 
+	public static int getNumber() {
+		return numbers;
+	}
+
+	public static boolean setNumber(int input) {
+		numbers = input;
+		return true;
+	}
+
 	public int getRestaurantId() {
 		return restarauntId;
 	}

@@ -10,6 +10,7 @@ public class Restaraunt implements Serializable{
 	private double credit;
 	private double rating;
 	private int ratingCount;
+	public static int highNum = 0;
 
 // The Hell am I going to do these
 	private ArrayList<Address> address;
@@ -49,6 +50,16 @@ public class Restaraunt implements Serializable{
 
 	public boolean setLoginId(int input){
 		this.loginId = input;
+		return true;
+	}
+
+	//highNumber
+	public static int getHighNum(){
+		return highNum;
+	}
+
+	public static boolean setHighNum(int input) {
+		highNum = input;
 		return true;
 	}
 

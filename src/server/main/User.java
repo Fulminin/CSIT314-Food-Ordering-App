@@ -10,6 +10,7 @@ public class User implements Serializable{
 	private double credit;
 	private MemberStatus memberStatus;
 	private ArrayList<Address> address;
+	public static int highId = 0;
 
 	public User(int userId, int loginId, String firstName, String lastName, double credit, MemberStatus memberStatus) {
 		this.userId = userId;
@@ -28,6 +29,15 @@ public class User implements Serializable{
 
 	public boolean setId(int in) {
 		this.userId = in;
+		return true;
+	}
+
+	public static int getHighId(){
+		return highId;
+	}
+
+	public static boolean setHighId(int input){
+		highId = input;
 		return true;
 	}
 

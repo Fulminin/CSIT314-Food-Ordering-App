@@ -1,20 +1,32 @@
 import java.util.ArrayList;
 
 public class Model {
-	ArrayList<Login> logins;
-	ArrayList<User> users;
-	ArrayList<Restaraunt> restaraunts;
-	ArrayList<Promo> promos;
-	ArrayList<Order> orders;
-	Communication comms;
-	Storage store;
+	private ArrayList<Login> logins;
+	private ArrayList<User> users;
+	private ArrayList<Restaraunt> restaraunts;
+	private ArrayList<Promo> promos;
+	private ArrayList<Order> orders;
+	private Communication comms;
+	private Storage store;
+	private boolean runningLikeAChamp = false;
 	
 	public static void main(String[] args){
-
+		Model mainProgram = new Model();
+		mainProgram.readAllFromStorage();
+		mainProgram.mainLoop();
+		mainProgram.writeAllToStorage();
 	}
 
 	public Model() {
 		store = new DataStorage();
+	}
+
+	public void mainLoop(){
+		runningLikeAChamp = true;
+		while (runningLikeAChamp){ // for shut down we need to set Running Like a champ to false
+
+		}
+
 	}
 
 	public boolean connect() {
@@ -46,7 +58,20 @@ public class Model {
 	}
 
 	public void writeAllToStorage() {
+		writeLogins();
+		writeUsers();
+		writeRestaraunt();
+		writePromo();
+		writeLogins();
 
+	}
+
+	public void readAllFromStorage(){
+		fetchLogins();
+		fetchUser();
+		fetchRestaraunt();
+		fetchPromo();
+		fetchOrder();
 	}
 
 	public int calculateDistance(Restaraunt rest, User use) {
@@ -93,44 +118,78 @@ public class Model {
 		return false;
 	}
 
+	// These are unsafe as I am deseralizing array lists the Java Run time knows they are array lists but doesn't know what is stored in those array lists.
+	// Which im casting to their respective classes
 	private boolean fetchLogins() {
-		return false;
+		logins = store.fetchLogin(); // I know what i did here is unsafe but provided we use the API it should be fine
+		for(Login u : logins) {
+			if (u.getLoginID() > Login.getNumber()){
+				Login.setNumber(u.getLoginID() + 1);
+			}
+		}
+		return true;
 	}
 
 	private boolean fetchUser() {
-		return false;
+		users = store.fetchUser(); // I know what i did here is unsafe but provided we use the API it should be fine
+		for(User u : users) {
+			if (u.getId() > User.getHighId()){
+				User.setHighId(u.getId() + 1);
+			}
+		}
+		return true;
 	}
-
 	private boolean fetchRestaraunt() {
-		return false;
+		restaraunts = store.fetchRestaraunt(); // I know what i did here is unsafe but provided we use the API it should be fine
+		for(Restaraunt u : restaraunts) {
+			if (u.getId() > Restaraunt.getHighNum()){
+				Restaraunt.setHighNum(u.getId() + 1);
+			}
+		}
+		return true;
 	}
 
 	private boolean fetchPromo() {
-		return false;
+		// THIS DOESN'T HAVE ID NUMBERS THEY ARE IDENTIFIED BY PROMO CODE
+		promos = store.fetchPromo(); 
+		// again I used Unsafe code
+	
+		return true;
 	}
 
 	private boolean fetchOrder() {
+		orders = store.fetchOrder(); // probably realised still unsafe code
+		for(Order u : orders) {
+			if (u.getOrderId() > Order.getNumber()){
+				Order.setNumber(u.getOrderId() + 1);
+			}
+		}
+		return true;
+	}
+
+	private boolean writeLogins() { // returns true if data is saved, false for Exception
+		store.setLogin(logins);
 		return false;
 	}
 
-	private boolean writeLogins() {
-		return false;
-	}
-
-	private boolean writeUsers() {
+	private boolean writeUsers() { // returns true if data is saved, false for Exception
+		store.setUser(users);
 		return false;
 	}
 	
-	private boolean writeRestaraunt() {
+	private boolean writeRestaraunt() { // returns true if data is saved, false for Exception
+		store.setRestaraunt(restaraunts);
 		return false;
 	}
 
-	private boolean writePromo() {
+	private boolean writePromo() { // returns true if data is saved, false for Exception
+		store.setPromo(promos);
 		return false;
 	}
 
 	private boolean writeOrders() {
-		return false;
+		return store.setOrder(orders); // returns true if data is saved, false for Exception
+
 	}
 
 	private Login recieveLogin() {

@@ -19,11 +19,11 @@ public class Login implements Serializable{
 		this.password = inPass;
 	}
 
-	public void setNumber(int num) {
+	public static void setNumber(int num) {
 		number = num + 1;
 	}
 
-	public int getNumber() {
+	public static int getNumber() {
 		return number-1;
 	}
 
