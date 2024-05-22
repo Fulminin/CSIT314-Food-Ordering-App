@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 
+
+// A word of warning I used "" (empty Strings to indicate unknown) and 2000-01-01 to indicate Unknown date
 public class Model {
 	private ArrayList<Login> logins;
 	private ArrayList<User> users;
@@ -12,7 +14,7 @@ public class Model {
 	
 	public static void main(String[] args){
 		Model mainProgram = new Model();
-		mainProgram.readAllFromStorage();
+		mainProgram.readAllFromStorage(); // this should only ever be run once; although i don't think it would cause muc hof an issue
 		mainProgram.mainLoop();
 		mainProgram.writeAllToStorage();
 	}
@@ -21,6 +23,7 @@ public class Model {
 		store = new DataStorage();
 	}
 
+	// Put Stuff in here to run
 	public void mainLoop(){
 		runningLikeAChamp = true;
 		while (runningLikeAChamp){ // for shut down we need to set Running Like a champ to false
@@ -28,7 +31,7 @@ public class Model {
 		}
 
 	}
-
+	// not sure if actually needed but made thses if we need to connect or disconnect from stuff
 	public boolean connect() {
 		return false;
 	}
@@ -37,6 +40,7 @@ public class Model {
 		return false;
 	}
 
+	// checking to see if there is anything waiting to add to the datamodel
 	public void checkCommunications() {
 
 	}
@@ -56,7 +60,7 @@ public class Model {
 	public void checkOrders() {
 		
 	}
-
+	// loading all data from persistant storage
 	public void writeAllToStorage() {
 		writeLogins();
 		writeUsers();
@@ -66,6 +70,7 @@ public class Model {
 
 	}
 
+	// getting all data from the persistant stoarage
 	public void readAllFromStorage(){
 		fetchLogins();
 		fetchUser();
@@ -78,44 +83,75 @@ public class Model {
 		return -1;
 	}
 
-	public Login getLogin(int pos) {
-		return null;
+	// Getting from the Array Lists and getting from array lists
+	public Login getLogin(int id) {
+		for (Login u : logins){
+			if(u.getLoginID() == id){
+				return u;
+			}
+		}
+		return new Login("", ""); // Blank Login to stopp null reference
 	}
 
 	public boolean addLogin(Login input) {
-		return false;
+		logins.add(input);
+		return true;
 	}
 
-	public User getUser(int pos) {
-		return null;
+	public User getUser(int id) {
+		for (User u : users){
+			if(u.getId() == id){
+				return u;
+			}
+		}
+		return new User(id, 0, "", "", 0.0, MemberStatus.Normal); // Blank User to stop null reference
 	}
 
 	public boolean addUser(User input) {
-		return false;
+		users.add(input);
+		return true;
 	}
 
-	public Restaraunt getRestaraunt(int pos) {
-		return null;
+	public Restaraunt getRestaraunt(int id) {
+		for (Restaraunt u : restaraunts){
+			if(u.getId() == id){
+				return u;
+			}
+		}
+		return new Restaraunt(id, 0, "", "", 0.0, 0.0, 0); // Blank Restaraunt to stop null reference
 	}
 
 	public boolean addRestaraunt(Restaraunt input) {
-		return false;
+		restaraunts.add(input);
+		return true;
 	}
 
-	public Promo getPromo(int pos) {
-		return null;
+	public Promo getPromo(String code) {
+		for (Promo u : promos){
+			if(u.getPromoCode().equals(code)){
+				return u;
+			}
+		}
+		return new Promo(code, 0, "2000-01-01", "2000-01-01"); // Blank Promo to stop null reference
 	}
 
 	public boolean addPromo(Promo imput) {
-		return false;
+		promos.add(imput);
+		return true;
 	}
 
-	public Order getOrder(int pos) {
-		return null;
+	public Order getOrder(int id) {
+		for (Order u : orders){
+			if(u.getOrderId() == id){
+				return u;
+			}
+		}
+		return new Order(id, 0, "2000-01-01", OrderStatus.cart, ""); // Blank Promo to stop null reference
 	}
 
 	public boolean addOrder(Order input) {
-		return false;
+		orders.add(input);
+		return true;
 	}
 
 	// These are unsafe as I am deseralizing array lists the Java Run time knows they are array lists but doesn't know what is stored in those array lists.
@@ -192,6 +228,7 @@ public class Model {
 
 	}
 
+	// getting data from the communications object to input into the datamodel
 	private Login recieveLogin() {
 		return null;
 	}
@@ -212,6 +249,7 @@ public class Model {
 		return null;
 	}
 
+	// sending data to the communications class to be sent to clients
 	private boolean sendLogin(Login out) {
 		return false;
 	}
