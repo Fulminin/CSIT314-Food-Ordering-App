@@ -8,7 +8,7 @@ import java.io.FileInputStream;
 public class DataStorage implements Storage{
 	File loginSave = new File("loginSave.ser");
 	File userSave = new File("userSave.ser");
-	File OrderSave = new File("orderSave.ser");
+	File orderSave = new File("orderSave.ser");
 	File promoSave = new File("promoSave.ser");
 	File restarauntSave = new File("restarauntSave.ser");
 
@@ -72,6 +72,21 @@ public class DataStorage implements Storage{
 		}
 	}
 
+	public ArrayList<Order> fetchOrder() {
+		try {
+			FileInputStream fileIn = new FileInputStream(orderSave);
+			ObjectInputStream converter = new ObjectInputStream(fileIn);
+			ArrayList<Order> pros = (ArrayList<Order>) converter.readObject();
+			converter.close();
+			fileIn.close();
+
+			return pros;
+		} catch (Exception e) {
+			System.out.println("No File Found Returning empty array");
+			return new ArrayList<Order>();
+		}
+	}
+
 	public boolean setLogin(ArrayList<Login> newLogin){
 		try {
 			FileOutputStream fileOut = new FileOutputStream(loginSave, false);
@@ -122,6 +137,21 @@ public class DataStorage implements Storage{
 			FileOutputStream fileOut = new FileOutputStream(promoSave, false);
 			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
 			converter.writeObject(newPromo);
+			converter.close();
+			fileOut.close();
+
+			return true;
+		} catch (Exception e) {
+			System.out.println("Data not Saved");
+			return false;
+		}
+	}
+
+	public boolean setOrder(ArrayList<Order> newOrder) {
+		try {
+			FileOutputStream fileOut = new FileOutputStream(orderSave, false);
+			ObjectOutputStream converter = new ObjectOutputStream(fileOut);
+			converter.writeObject(newOrder);
 			converter.close();
 			fileOut.close();
 
