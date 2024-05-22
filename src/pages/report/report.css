@@ -52,3 +52,17 @@
     font-size: 24px;
     font-weight: bolder;
 }
+
+.bar-chart {
+    margin-top: 100px auto;
+    display: flex;
+    align-items: flex-end;
+    height: 200px; /* Adjust as needed */
+    width: auto;
+  }
+  
+  .bar {
+    width: 40px; /* Adjust width as needed */
+    background-color: #FF7A00; /* Adjust color as needed */
+    margin-right: 30px; /* Adjust margin between bars */
+  }
