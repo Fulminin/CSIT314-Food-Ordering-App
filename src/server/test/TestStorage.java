@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 public class testStorage {
 
 	@Test
-	public void testSetLogin() {
+	public void TestSetLogin() {
 		Storage testStore = new DataStorage();
 		Login[] arrays = {new Login(1,"testUser", "testPass"), new Login(2,"testUser", "testPass")};
 		assertTrue(testStore.setLogin(new ArrayList<Login>(Arrays.asList(arrays))));
