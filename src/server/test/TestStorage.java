@@ -5,10 +5,10 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-public class testStorage {
+public class TestStorage {
 
 	@Test
-	public void TestSetLogin() {
+	public void testSetLogin() {
 		Storage testStore = new DataStorage();
 		Login[] arrays = {new Login(1,"testUser", "testPass"), new Login(2,"testUser", "testPass")};
 		assertTrue(testStore.setLogin(new ArrayList<Login>(Arrays.asList(arrays))));
