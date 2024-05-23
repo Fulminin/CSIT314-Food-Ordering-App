@@ -20,7 +20,7 @@ const orders = [
 const OrderHistoryPage = () => {
 return (
     <div className="order-history-page">
-    <Link to="/homeRO" className='back'>Back to home page</Link>
+        <Link to="/homeRO" className='back'>Back to home page</Link>
     {orders.map(order => (
         <div key={order.id} className="order-item">
         {order.items.map((item, index) => (
