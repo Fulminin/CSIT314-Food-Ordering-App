@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-public class testUser {
+public class TestUser {
 	// int userId, int loginId, String firstName, String lastName, double credit, MemberStatus memberStatus
 	public User con = new User(1 , 2, "John", "Smith", 20.45, MemberStatus.Normal);
 
