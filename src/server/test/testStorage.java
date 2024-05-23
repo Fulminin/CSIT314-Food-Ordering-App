@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 import org.junit.jupiter.api.Test;
 
-public class TestStorage {
+public class testStorage {
 
 	@Test
 	public void testSetLogin() {
