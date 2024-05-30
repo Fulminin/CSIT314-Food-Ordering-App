@@ -1,4 +1,6 @@
-public class Login {
+import java.io.Serializable;
+
+public class Login implements Serializable{
 	private int LoginID;
 	private String username;
 	private String password;
@@ -17,11 +19,11 @@ public class Login {
 		this.password = inPass;
 	}
 
-	public void setNumber(int num) {
+	public static void setNumber(int num) {
 		number = num + 1;
 	}
 
-	public int getNumber() {
+	public static int getNumber() {
 		return number-1;
 	}
 
@@ -47,5 +49,27 @@ public class Login {
 
 	public void setPassword(String inPass) {
 		password = inPass;
+	}
+
+	public boolean equals(Object check) {
+		if(this == check) {
+			return true;
+		}
+		else if(check == null || getClass() != check.getClass()) {
+			return false;
+		}
+		else {
+			// int inLog, String inUser, String inPass
+			Login log = (Login) check;
+			if(LoginID == log.getLoginID() 
+				&& username.equals(log.getUsername()) 
+				&& password.equals(log.getPassword())) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+
 	}
 }
