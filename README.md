@@ -1,2 +1,8 @@
-# CSIT314-Food-Ordering-App
-CSIT314 Group Project to create a Food Ordering app which connects customers to the restaraunts for the purposes of dering Food. Now with added CI THIS. I think I broke Github
+# React + Vite
+
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+
+Currently, two official plugins are available:
+
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
