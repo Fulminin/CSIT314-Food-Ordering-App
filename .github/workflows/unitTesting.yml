@@ -39,6 +39,7 @@ jobs:
       with:
          node-version: ${{ matrix.node-version }}
          cache: npm
+    - run: npm install
     - name: Build with Node
       run: npm ci
     - name: Run React Tests
